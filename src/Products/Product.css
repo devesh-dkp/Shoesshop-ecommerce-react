@@ -1,49 +1,68 @@
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 20rem;
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
   margin-top: 2rem;
-  z-index: -2;
+  margin-left: 2%;
+    margin-right: 2%;
 }
 
 .card {
-  margin: 20px;
-  border: 2px solid #ededed;
-  padding: 20px;
-  cursor: pointer;
+  background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
 
 .card-img {
-  width: 13rem;
-  margin-bottom: 1rem;
+  width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .card-title {
-  margin-bottom: 1rem;
   font-size: 1.2rem;
-  
+  margin-top: 1rem;
+    cursor: pointer;
 }
 
 .card-reviews {
-  margin-bottom: 1rem;
   display: flex;
+  align-items: center;
+    margin-top: 0.5rem;
 }
 
 .rating-star {
-  color: #d5ab55;
+  color: #f1c40f;
 }
 
 .total-reviews {
-  font-size: 0.9rem;
-  margin-left: 10px;
+  margin-left: 0.5rem;
+    color: #535353;
 }
 
 .card-price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #535353;
 }
 
 .bag-icon {
+  font-size: 1.5rem;
   color: #535353;
+  cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .bag-icon:hover {
+    color: #f1c40f;
+  }
+  
+  .bag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
 }

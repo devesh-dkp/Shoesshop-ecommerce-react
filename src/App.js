@@ -4,7 +4,6 @@ import Navigation from "./Navigation/Nav";
 import Products from "./Products/Products";
 import products from "./db/data";
 import Recommended from "./Recommended/Recommended";
-import Sidebar from "./Sidebar/Sidebar";
 import Card from "./components/Card";
 import "./index.css";
 
@@ -53,7 +52,7 @@ function App() {
     }
 
     return filteredProducts.map(
-      ({ img, title, star, reviews, prevPrice, newPrice ,url}) => (
+      ({ img, title, star, reviews, prevPrice, newPrice, url }) => (
         <Card
           key={Math.random()}
           img={img}
@@ -62,7 +61,7 @@ function App() {
           reviews={reviews}
           prevPrice={prevPrice}
           newPrice={newPrice}
-          url = {url}
+          url={url}
         />
       )
     );
@@ -72,8 +71,11 @@ function App() {
 
   return (
     <>
-      <Sidebar handleChange={handleChange} />
-      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Navigation
+        query={query}
+        handleInputChange={handleInputChange}
+        handleChange={handleChange}
+      />
       <Recommended handleClick={handleClick} />
       <Products result={result} />
     </>
