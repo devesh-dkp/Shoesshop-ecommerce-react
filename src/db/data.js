@@ -140,7 +140,7 @@ const data = [
     category: "Running shoes",
     reviews: "(123 reviews)",
     star: <AiFillStar className="rating-star" />,
-    prevPrice: 7500,
+    prevPrice: "₹7500",
     newPrice: 6500,
     img: "https://m.media-amazon.com/images/I/71RhZAdw75L._AC_SX675_.jpg",
   },
@@ -153,7 +153,7 @@ const data = [
     category: "Sneakers",
     reviews: "(4567 reviews)",
     star: <AiFillStar className="rating-star" />,
-    prevPrice: 8000,
+    prevPrice: "₹8000",
     newPrice: 7000,
   },
   {
@@ -165,7 +165,7 @@ const data = [
     category: "Casual shoes",
     reviews: "(2345 reviews)",
     star: <AiFillStar className="rating-star" />,
-    prevPrice: 9000,
+    prevPrice: "₹9000",
     newPrice: 8000,
   },
   {
@@ -177,7 +177,7 @@ const data = [
     category: "Sneakers",
     reviews: "(789 reviews)",
     starRating: <AiFillStar className="rating-star" />,
-    prevPrice: 6500,
+    prevPrice: "₹7000",
     newPrice: 5500,
   },
   {
@@ -188,7 +188,7 @@ const data = [
     category: "Sandals",
     reviews: "(1234 reviews)",
     starRating: <AiFillStar className="rating-star" />,
-    prevPrice: 1500,
+    prevPrice: "₹1500",
     newPrice: 1200,
   },
   {
@@ -200,7 +200,7 @@ const data = [
     category: "Running shoes",
     reviews: "(876 reviews)",
     starRating: <AiFillStar className="rating-star" />,
-    prevPrice: 6000,
+    prevPrice: "₹6000",
     newPrice: 5000,
   },
   {
@@ -212,7 +212,7 @@ const data = [
     category: "Casual sneakers",
     reviews: "(3456 reviews)",
     starRating: <AiFillStar className="rating-star" />,
-    prevPrice: 5500,
+    prevPrice: "₹5500",
     newPrice: 4500,
   },
 
