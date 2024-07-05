@@ -12,7 +12,9 @@ const Quantifier = ({
       <button onClick={() => handleUpdateQuantity(productId, "-1")}>-</button>
       <span>{quantity}</span>
       <button onClick={() => handleUpdateQuantity(productId, "1")}>+</button>
-      <button onClick={removeProductCallback}>Remove</button>
+      <button className="remove-button" onClick={removeProductCallback}>
+        Remove
+      </button>
     </div>
   );
 };
