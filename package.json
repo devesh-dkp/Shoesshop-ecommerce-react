@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "use-local-storage-state": "^19.3.1"
   }
 }

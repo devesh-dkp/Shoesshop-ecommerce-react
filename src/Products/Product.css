@@ -2,7 +2,6 @@
   display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
-  margin-top: 2rem;
   margin-left: 2%;
     margin-right: 2%;
 }
@@ -19,7 +18,6 @@
   width: 100%;
     height: 200px;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 .card-title {
@@ -49,20 +47,48 @@
     color: #535353;
 }
 
-.bag-icon {
-  font-size: 1.5rem;
+.add-to-cart {
+  font-size: 1.2rem;
   color: #535353;
   cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .bag-icon:hover {
-    color: #f1c40f;
-  }
-  
-  .bag {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.add-to-cart:hover {
+  color: #f1c40f;
+}
+
+.cart-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.cart-add[disabled] .add-to-cart {
+  color: #702323; /* Change this color to your desired disabled color */
+  cursor: not-allowed;
+  background-color: white;
+}
+
+.cart-add[disabled] .add-to-cart:hover {
+  color: #702323;
+}
+
+/* Add styles to make it look like Amazon's add to cart button */
+.add-to-cart-button {
+  background-color: #ffd814;
+  border: 1px solid hsl(50, 100%, 49%);
+  border-radius: 6rem;
+  padding: 0.5rem 4rem;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+}
+
+.add-to-cart-button:hover {
+  background-color: #fcd200;
 }

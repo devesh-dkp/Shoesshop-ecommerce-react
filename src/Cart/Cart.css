@@ -1,0 +1,56 @@
+.cart {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 8rem;
+  }
+  
+  .container {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .product img {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+  }
+  .total-price {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .quantifier {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantifier button {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+  
+  .quantifier span {
+    padding: 0 1rem;
+  }
+
+  .total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  

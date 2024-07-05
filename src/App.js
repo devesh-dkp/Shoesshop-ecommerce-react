@@ -3,13 +3,28 @@ import { useState } from "react";
 import Navigation from "./Navigation/Nav";
 import Products from "./Products/Products";
 import products from "./db/data";
-import Recommended from "./Recommended/Recommended";
 import Card from "./components/Card";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Cart from "./Cart/Cart";
 import "./index.css";
+import useLocalStorageState from "use-local-storage-state";
+import { Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [cart, setCart] = useLocalStorageState("cart", {});
+  const addToCart = (product) => {
+    product.quantity = 1;
 
+    setCart((prevCart) => ({
+      ...prevCart,
+      [product.id]: product,
+    }));
+  };
+
+  const isInCart = (productId) =>
+    Object.keys(cart || {}).includes(productId.toString());
   // ----------- Input Filter -----------
   const [query, setQuery] = useState("");
 
@@ -51,34 +66,54 @@ function App() {
       );
     }
 
-    return filteredProducts.map(
-      ({ img, title, star, reviews, prevPrice, newPrice, url }) => (
-        <Card
-          key={Math.random()}
-          img={img}
-          title={title}
-          star={star}
-          reviews={reviews}
-          prevPrice={prevPrice}
-          newPrice={newPrice}
-          url={url}
-        />
-      )
-    );
+    return filteredProducts.map((product) => (
+      <Card
+        product={product}
+        addToCart={addToCart}
+        isInCart={isInCart}
+        key={product.id}
+      />
+    ));
   }
 
   const result = filteredData(products, selectedCategory, query);
 
   return (
-    <>
-      <Navigation
-        query={query}
-        handleInputChange={handleInputChange}
-        handleChange={handleChange}
-      />
-      <Recommended handleClick={handleClick} />
-      <Products result={result} />
-    </>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navigation
+                query={query}
+                handleInputChange={handleInputChange}
+                handleChange={handleChange}
+                handleClick={handleClick}
+              />
+              <Products result={result} />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/cart"
+          element={
+            <>
+              <Navigation
+                query={query}
+                handleInputChange={handleInputChange}
+                handleChange={handleChange}
+                handleClick={handleClick}
+              />
+              <Cart />
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 
