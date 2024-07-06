@@ -29,7 +29,7 @@ const Nav = ({ handleInputChange, query, handleChange, handleClick }) => {
   useEffect(() => {
     const shrinkNavbar = () => {
       const nav = document.querySelector("nav");
-      nav.style.transition = "0.5s";
+      // nav.style.transition = "0.5s";
       if (window.scrollY > 200) {
         nav.classList.add("shrink");
       } else {

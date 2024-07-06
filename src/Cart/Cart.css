@@ -1,66 +1,116 @@
 .cart {
-    width: 100%;
-    max-width: 50rem;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 8rem;
-  }
-  
-  .container {
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .product {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-  }
-  
-  .product img {
-    width: 100px;
-    height: 100px;
-    margin-right: 1rem;
-  }
-  .total-price {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
+  width: 100%;
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+}
 
-  .quantifier {
-    display: flex;
-    align-items: center;
-  }
-  
-  .quantifier button {
-    background: none;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    cursor: pointer;
-    margin: 0 0.5rem;
-  }
-  .remove-button {
-    background-color: burlywood;
-    border: none;
-    color: red;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 5px;
-  }
-  
-  .quantifier span {
-    padding: 0 1rem;
-  }
+.container {
+  display: flex-inline;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
 
-  .total-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+.product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.product img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+  border-radius: 4px;
+}
+
+.total-price {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+.quantifier {
+  display: flex;
+  align-items: center;
+}
+
+.quantifier span {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  width: 3rem;
+  text-align: center;
+}
+
+.remove-button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+  background-color: #ff1a1a;
+}
+
+.update-quantity-button, .remove-icon {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 6rem;
+  transition: background-color 0.3s;
+}
+
+.update-quantity-button:hover , .remove-icon:hover {
+  background-color: #45a049;
+}
+.remove-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 1.9rem;
+}
+
+
+.remove-icon:before,
+.remove-icon:after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  background-color: red;
+}
+
+.remove-icon:before {
+  transform: rotate(45deg);
+}
+
+.remove-icon:after {
+  transform: rotate(-45deg);
+}

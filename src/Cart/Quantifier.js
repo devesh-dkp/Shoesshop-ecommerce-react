@@ -9,9 +9,25 @@ const Quantifier = ({
 }) => {
   return (
     <div className="quantifier">
-      <button onClick={() => handleUpdateQuantity(productId, "-1")}>-</button>
+      <button
+        className={`${
+          quantity === 1 ? "remove-icon" : "update-quantity-button"
+        }`}
+        onClick={() =>
+          quantity === 1
+            ? removeProductCallback()
+            : handleUpdateQuantity(productId, "-1")
+        }
+      >
+        {quantity > 1 && "-"}
+      </button>
       <span>{quantity}</span>
-      <button onClick={() => handleUpdateQuantity(productId, "1")}>+</button>
+      <button
+        className="update-quantity-button"
+        onClick={() => handleUpdateQuantity(productId, "1")}
+      >
+        +
+      </button>
       <button className="remove-button" onClick={removeProductCallback}>
         Remove
       </button>
